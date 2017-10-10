@@ -1,0 +1,125 @@
+entity Talent {
+  email String
+  password String
+}
+
+entity TalentProfile {
+  firstName String
+  lastName String  
+}
+
+entity SocialNetworks {
+	name String
+    url String
+}
+
+entity TalentTitle {
+  title String
+}
+
+
+entity PersonalTraits {
+  description String
+}
+
+entity CompanyTraits {
+  title String
+}
+
+entity Country {
+  name String
+  countryCode String
+}
+
+entity City {
+  name String
+}
+
+entity TalentRole {
+	title String
+    description String
+}
+
+entity TalentExperience {
+	years String    
+}
+
+entity WorkType {
+	workType String
+    description String
+}
+
+entity Skills {
+	skill String
+}
+
+entity NotableProjects {
+	title String
+    description String
+}
+
+entity JobOffer {
+	title String
+    description String
+    salaryMax String
+    salaryMin String
+    salaryCurrency String
+}
+
+relationship OneToOne {
+	Talent{talentProfile} to TalentProfile
+}
+
+relationship OneToOne {
+	Talent{talentRole} to TalentRole
+}
+
+relationship OneToOne {
+	Talent{country} to Country
+}
+
+relationship OneToOne {
+	Talent{city} to City
+}
+
+relationship OneToMany {
+	Country{city} to City
+}
+
+relationship OneToOne {
+	Talent{talentTitle} to TalentTitle
+}
+
+relationship OneToOne {
+	Talent{talentExperience} to TalentExperience
+}
+
+relationship OneToOne {
+	Talent{workType} to WorkType
+}
+
+relationship OneToMany {
+	Talent{skills} to Skills
+}
+
+relationship OneToMany {
+	Talent{notableProjects} to NotableProjects
+}
+
+relationship OneToMany {
+	Talent{companyTraits} to CompanyTraits
+}
+
+relationship OneToMany {
+	Talent{personalTraits} to PersonalTraits
+}
+
+relationship OneToMany {
+	Talent{socialNetworks} to SocialNetworks
+}
+
+relationship OneToMany {
+	Talent{jobOffer} to JobOffer
+}
+
+
