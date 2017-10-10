@@ -1,7 +1,15 @@
 entity Talent {
   email String
+}
+
+entity TalentProfile {
   firstName String
-  lastNname String
+  lastName String  
+}
+
+entity TalentSocialNetworks {
+	name String
+    url String
 }
 
 entity TalentTitle {
@@ -50,6 +58,10 @@ entity NotableProjects {
 }
 
 relationship OneToOne {
+	Talent{talentProfile} to TalentProfile
+}
+
+relationship OneToOne {
 	Talent{talentRole} to TalentRole
 }
 
@@ -88,3 +100,8 @@ relationship OneToMany {
 relationship OneToMany {
 	Talent{talentPersonalTraits} to TalentPersonalTraits
 }
+
+relationship OneToMany {
+	Talent{talentSocialNetworks} to TalentSocialNetworks
+}
+
