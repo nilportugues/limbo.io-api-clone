@@ -1,5 +1,6 @@
 entity Talent {
   email String
+  password String
 }
 
 entity TalentProfile {
@@ -57,6 +58,14 @@ entity NotableProjects {
     description String
 }
 
+entity JobOffer {
+	title String
+    description String
+    salaryMax String
+    salaryMin String
+    salaryCurrency String
+}
+
 relationship OneToOne {
 	Talent{talentProfile} to TalentProfile
 }
@@ -71,6 +80,10 @@ relationship OneToOne {
 
 relationship OneToOne {
 	Talent{city} to City
+}
+
+relationship OneToMany {
+	Country{city} to City
 }
 
 relationship OneToOne {
@@ -103,5 +116,9 @@ relationship OneToMany {
 
 relationship OneToMany {
 	Talent{talentSocialNetworks} to TalentSocialNetworks
+}
+
+relationship OneToMany {
+	Talent{jobOffer} to JobOffer
 }
 
