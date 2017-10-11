@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "talent",
+            "otherEntityName": "talent",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salaryMax",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salaryMin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salaryCurrency",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171011152016",
+    "entityTableName": "job_offer",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass"
+}

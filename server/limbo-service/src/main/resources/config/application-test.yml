@@ -1,0 +1,59 @@
+# ===================================================================
+# TEST CONFIGURATION FILE
+# ===================================================================
+
+logging.level.ROOT: WARN
+
+spring:
+    profiles:
+        active: test
+
+    jackson:
+        serialization.indent_output: false
+
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:mysql://localhost:3306/limbo_test?useUnicode=true&characterEncoding=utf8&useSSL=false
+        name:
+        username: root
+        password:
+        hikari:
+            data-source-properties:
+                cachePrepStmts: true
+                prepStmtCacheSize: 250
+                prepStmtCacheSqlLimit: 2048
+                useServerPrepStmts: true
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        database: MYSQL
+        show-sql: false
+        properties:
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: false
+            hibernate.cache.use_second_level_cache: false
+            # hibernate.cache.use_second_level_cache: true
+            # hibernate.cache.region.factory_class: io.bandit.limbo.limbo.jhipster.config.hazelcast.HazelcastCacheRegionFactory
+            # hibernate.cache.use_minimal_puts: true
+            # hibernate.cache.hazelcast.use_lite_member: true
+
+    data:
+        elasticsearch:
+            cluster-name:
+            cluster-nodes: localhost:9300
+
+liquibase:
+    contexts: test
+
+server:
+    port: 18081
+
+
+swagger.contact.name: ""
+swagger.contact.url: ""
+swagger.contact.email: ""
+swagger.api-info.title: "limbo API (Test)"
+swagger.api-info.description: ""
+swagger.api-info.version: "1.0.0"
+swagger.api-info.tos: ""
+swagger.api-info.license: ""
+swagger.api-info.license-url: ""

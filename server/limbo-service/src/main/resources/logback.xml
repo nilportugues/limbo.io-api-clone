@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+    <logger name="ROOT" level="INFO"/>
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.springframework.cloud" level="ERROR"/>
+    <logger name="io.micrometer" level="WARN"/>
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="org.elasticsearch" level="WARN"/>
+    <logger name="com.hazzlecast" level="WARN"/>
+    <logger name="io.undertow" level="ERROR"/>
+    <logger name="org.xnio" level="WARN"/>
+    <logger name="springfox" level="WARN"/>
+    <logger name="com.zaxxer" level="WARN"/>
+    <logger name="liquibase" level="WARN"/>
+</configuration>

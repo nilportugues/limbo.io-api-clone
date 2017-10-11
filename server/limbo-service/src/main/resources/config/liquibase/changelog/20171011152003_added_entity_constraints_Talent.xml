@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Talent.
+    -->
+    <changeSet id="20171011152003-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="talent_profile_id"
+                                 baseTableName="talent"
+                                 constraintName="fk_talent_talent_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talent_profile"/>
+
+        <addForeignKeyConstraint baseColumnNames="talent_role_id"
+                                 baseTableName="talent"
+                                 constraintName="fk_talent_talent_role_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talent_role"/>
+
+        <addForeignKeyConstraint baseColumnNames="country_id"
+                                 baseTableName="talent"
+                                 constraintName="fk_talent_country_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="country"/>
+
+        <addForeignKeyConstraint baseColumnNames="city_id"
+                                 baseTableName="talent"
+                                 constraintName="fk_talent_city_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="city"/>
+
+        <addForeignKeyConstraint baseColumnNames="talent_title_id"
+                                 baseTableName="talent"
+                                 constraintName="fk_talent_talent_title_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talent_title"/>
+
+        <addForeignKeyConstraint baseColumnNames="talent_experience_id"
+                                 baseTableName="talent"
+                                 constraintName="fk_talent_talent_experience_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talent_experience"/>
+
+        <addForeignKeyConstraint baseColumnNames="work_type_id"
+                                 baseTableName="talent"
+                                 constraintName="fk_talent_work_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="work_type"/>
+
+    </changeSet>
+</databaseChangeLog>

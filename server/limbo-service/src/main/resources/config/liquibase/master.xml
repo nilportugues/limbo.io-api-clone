@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152003_added_entity_Talent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152004_added_entity_TalentProfile.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152005_added_entity_SocialNetworks.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152006_added_entity_TalentTitle.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152007_added_entity_PersonalTraits.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152008_added_entity_CompanyTraits.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152009_added_entity_Country.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152010_added_entity_City.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152011_added_entity_TalentRole.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152012_added_entity_TalentExperience.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152013_added_entity_WorkType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152014_added_entity_Skills.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152015_added_entity_NotableProjects.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152016_added_entity_JobOffer.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20171011152003_added_entity_constraints_Talent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152005_added_entity_constraints_SocialNetworks.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152007_added_entity_constraints_PersonalTraits.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152008_added_entity_constraints_CompanyTraits.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152010_added_entity_constraints_City.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152014_added_entity_constraints_Skills.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152015_added_entity_constraints_NotableProjects.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20171011152016_added_entity_constraints_JobOffer.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

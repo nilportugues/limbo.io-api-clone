@@ -9,7 +9,7 @@ entity TalentProfile {
 }
 
 entity SocialNetworks {
-	name String
+    name String
     url String
 }
 
@@ -36,7 +36,7 @@ entity City {
 }
 
 entity TalentRole {
-	title String
+    title String
     description String
 }
 
@@ -122,4 +122,8 @@ relationship OneToMany {
 	Talent{jobOffer} to JobOffer
 }
 
+
+dto all with mapstruct
+service all with serviceClass
+paginate all with pagination
 

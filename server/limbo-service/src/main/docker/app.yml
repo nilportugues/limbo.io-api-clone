@@ -1,0 +1,42 @@
+version: '2'
+services:
+#    limbo-app:
+#        image: limbo
+##        external_links:
+###            - limbo-mysql:mysql
+##########            - jhipster-registry:registry
+##        environment:
+#            - SPRING_PROFILES_ACTIVE=prod,swagger
+####            - SPRING_CLOUD_CONFIG_URI=http://admin:admin@registry:8761/config
+####            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/limbo?useUnicode=true&characterEncoding=utf8&useSSL=false
+######            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+####
+    limbo-mysql:
+        extends:
+            file: mysql.yml
+            service: limbo-mysql
+
+    limbo-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: limbo-elasticsearch
+    
+    jhipster-registry:
+        extends:
+            file: jhipster-registry.yml
+            service: jhipster-registry
+        environment:
+            - SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=file:./central-config/docker-config/
+
+    influxdb:
+        image: influxdb:1.2.4
+        ports:
+            - 8083:8083
+            - 8086:8086
+        environment:
+         - INFLUXDB_DB=limbo_metrics
+         - INFLUXDB_ADMIN_ENABLED=true
+         - INFLUXDB_ADMIN_USER=limbo_admin
+         - INFLUXDB_ADMIN_USER=limbo_admin_password
+         - INFLUXDB_USER=limbo_user
+         - INFLUXDB_USER_PASSWORD=limbo_password
