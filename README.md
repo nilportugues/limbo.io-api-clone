@@ -1,2 +1,2 @@
-# copycat-limbo.io
-API to work on a copycat of Limbo.io
+# limbo.io-api-clone
+API clone to work just like Limbo.io's API.
