@@ -25,7 +25,7 @@
         <awaitility.version>1.7.0</awaitility.version>
         <commons-io.version>2.5</commons-io.version>
         <commons-lang.version>3.4</commons-lang.version>
-        <hazelcast.version>3.6.5</hazelcast.version>
+        <hazelcast.version>3.11</hazelcast.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <hikaricp.version>2.4.6</hikaricp.version>
 
